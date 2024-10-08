@@ -1,0 +1,118 @@
+@import "../../app.scss";
+
+.contact {
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include mobile {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+    // .contact__text
+
+    &__text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include mobile {
+            gap: 20px;
+            text-align: center;
+            margin-top: 70px;
+            
+        }
+    }
+
+    // .contact__title
+
+    &__title {
+        font-size: 100px;
+        line-height: 0.88;
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+    // .contact__form
+
+    &__form {
+        flex: 1;
+        position: relative;
+        @include mobile {
+            padding: 50px;
+            width: 100%;
+        }
+    }
+
+    // .contact__svg
+
+    &__svg {
+        position: absolute;
+        margin: auto;
+        stroke: orange;
+    }
+}
+.contact-item {
+    // .contact-item__description
+
+    &__description {
+        font-weight: 300;
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    // .form__field
+
+    &__field {
+        width: 100%;
+    }
+
+    // .form__input
+
+    &__input {
+        width: 100%;
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 5px;
+        @include mobile {
+            padding: 10px;
+        }
+    }
+
+    // .form__textarea
+
+    &__textarea {
+        width: 100%;
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 5px;
+        @include mobile {
+            padding: 10px;
+        }
+    }
+
+    // .form__button
+
+    &__button {
+        width: 100%;
+        padding: 20px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        @include mobile {
+            padding: 10px;
+        }
+    }
+}

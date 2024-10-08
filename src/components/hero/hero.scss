@@ -1,0 +1,115 @@
+@import "../../app.scss";
+
+.hero {
+    overflow: hidden;
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+
+    // .hero__wrapper
+
+    &__wrapper {
+        position: relative;
+        height: 100%;
+        max-width: 1366px;
+        margin: auto;
+    }
+
+    // .hero__text
+
+    &__text {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    // .hero__subtitle
+
+    &__subtitle {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        @include mobile {
+            font-size: 21px;
+            letter-spacing: 6px;
+        }
+    }
+
+    // .hero__title
+
+    &__title {
+        font-size: 80px;
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+
+    // .hero__buttons
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        button {
+            padding: 20px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 300;
+        }
+    }
+
+    // .hero__scroll
+
+    &__scroll {
+        width: 50px;
+        img {
+            width: 100%;
+        }
+    }
+
+    // .hero__sliding-text
+    &__sliding-text {
+        position: absolute;
+        font-size: 50vh;
+        bottom: -10vh;
+        white-space: nowrap;
+        color: #ffffff09;
+        width: 50%;
+        font-weight: 700;
+        user-select: none;
+    }
+
+    // .hero__image
+    &__image {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include mobile {
+            width: 100%;
+            height: 50%;
+            top: unset;
+            bottom: 0;
+        }
+        img {
+            height: 100%;
+            @include mobile {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
